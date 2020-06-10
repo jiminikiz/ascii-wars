@@ -1,0 +1,14 @@
+<section id="game" ng-keydown="Game.key($event)">
+    <form id="command-line" ng-submit="Game.execute($event)">
+        <input type="text" ng-model="Game.stdin" placeholder="Enter your command!"/>
+    </form>
+    <div id="viewport">
+        <aside id="story" ng-bind-html="Game.room.markup"></aside>
+        <aside id="history">
+            <h2> Command History </h2>
+            <ol class="list">
+                <li ng-repeat="command in Game.history track by $index">{{ command }}</li>
+            </ol>
+        </aside>
+    </div>
+</section>

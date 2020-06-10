@@ -1,0 +1,187 @@
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #444;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #7cc121
+}
+
+@keyframes twinkle {
+    0%,100% { opacity: 0.25 }
+    50% { opacity: 1 }
+}
+
+* {
+    font-family: 'Orbitron', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+b,i,em,strong {
+    color: white;
+}
+
+p {
+    margin: 40px 50px;
+    font-size: 2em;
+    line-height: 30px;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    letter-spacing: 4px;
+}
+
+body {
+    position: relative;
+    background-color: #232527;
+    color: #a7e259;
+    font-size: 10px;
+    margin: 0;
+    text-shadow: 0 0 15px #7cc121;
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0
+}
+
+input, select, textarea, button, a {
+    outline-color: black;
+}
+
+input[type="text"] {
+    color: #7cc121;
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    padding: 10px;
+    width: 100%;
+    outline-color: #a7e259;
+    transition: all 300ms ease-out;
+    letter-spacing: 4px;
+}
+input[type="text"]:focus {
+    box-shadow: inset 0 0 10px #a7e259;
+}
+
+.list {
+    padding: 0 0 0 32px;
+    margin: 0;
+    font-size: 2em;
+}
+
+.button {
+    background-color: transparent;
+    border: 5px solid #efefef;
+    border-radius: 4px;
+    color: #efefef;
+    cursor: pointer;
+    font-size: 0.75em;
+    padding: 10px;
+    outline-color: black;
+    outline-width: 1px;
+}
+
+.button:hover {
+    background-color: white;
+    color: #333;
+}
+
+aside {
+    height: 100%
+}
+
+.title {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.twinkle {
+    animation: twinkle 2s linear infinite;
+}
+
+
+#splash {
+    margin: auto;
+    width: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 3em;
+    opacity: 1;
+    color: #efefef;
+}
+
+#game {
+    height: 100%;
+}
+
+#command-line {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #223322;
+    border-bottom: 5px solid #7cc121;
+    z-index: 3;
+}
+
+#viewport {
+    height: 100%;
+    padding-top: 62px;
+    position: relative;
+    z-index: 1;
+}
+
+#history {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    z-index: 3;
+    border-top: 5px solid #7cc121;
+    padding: 10px;
+    background-color: #111;
+    overflow-y: scroll;
+}
+
+#history h2 {
+    margin-bottom: 10px;
+}
+
+#history li {
+    font-size: 0.75em;
+    line-height: 2em;
+}
+
+#story {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    z-index: 2;
+}
+
+#story:before {
+    content: '>';
+    position: absolute;
+    font-size: 3em;
+    top: -6px;
+    left: 18px;
+}
